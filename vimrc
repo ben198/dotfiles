@@ -10,4 +10,5 @@ Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 filetype plugin indent on
 
-colorscheme Monokai
+colorscheme molokai
+set number
