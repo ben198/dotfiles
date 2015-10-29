@@ -6,11 +6,13 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
 
-colorscheme molokai
+colorscheme Monokai
 " Show line numbers in the margin
 set number
 " Automatically type closing paren/bracket/quote
