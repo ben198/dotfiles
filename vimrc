@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on
@@ -23,3 +24,5 @@ inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 " Exit parens/brackets/quotes while in Insert mode
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+" Ensure CtrlP plugin uses pwd as the root folder to search
+noremap <C-a> :CtrlP :pwd<CR>
