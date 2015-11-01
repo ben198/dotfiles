@@ -5,15 +5,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'sickill/vim-monokai'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on
 
-colorscheme Monokai
+" Change the mapleader from \ to ,
+let mapleader=","
+" Edit / reload vimrc (the one in ~/dotfiles, not the .vimrc symlink)
+nmap <silent> <leader>ev :e ~/dotfiles/vimrc
+nmap <silent> <leader>sv :so ~/dotfiles/vimrc
+" Enable syntax highlighting and set colour scheme
+syntax enable
+colorscheme monokai
 " Show line numbers in the margin
 set number
 " Automatically type closing paren/bracket/quote
@@ -40,3 +46,10 @@ else
 endif
 " Allow Vim to create hidden buffers without raising an error first
 set hidden
+" Set the Explore mode list style
+let g:netrw_liststyle=3
+" Set keyboard shortcut to enter Explore mode
+nmap <silent> <Leader>e :Explore<CR>
+"
+set nobackup
+set noswapfile
