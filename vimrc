@@ -56,3 +56,14 @@ nmap <silent> <Leader>e :Explore<CR>
 "
 set nobackup
 set noswapfile
+" Highlight current line
+set cursorline
+" Visual autocomplete for command menu
+set wildmenu
+" Redraw only when we need to
+set lazyredraw
+" Search as characters are entered, and highlight results
+set incsearch
+set hlsearch
+" Turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
