@@ -17,6 +17,9 @@ let mapleader=","
 " Edit / reload vimrc (the one in ~/dotfiles, not the .vimrc symlink)
 nmap <silent> <leader>ev :e ~/dotfiles/vimrc
 nmap <silent> <leader>sv :so ~/dotfiles/vimrc
+" Allow easy toggling between buffers
+nmap <leader>n :bnext<CR>
+nmap <leader>p :bprevious<CR>
 " Enable syntax highlighting and set colour scheme
 syntax enable
 colorscheme monokai
