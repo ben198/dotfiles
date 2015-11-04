@@ -67,3 +67,7 @@ set incsearch
 set hlsearch
 " Turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+" Save file with ctrl-s
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>l
+vnoremap <c-s> <Esc>:w<CR>
