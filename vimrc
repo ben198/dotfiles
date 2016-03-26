@@ -37,8 +37,6 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 noremap <C-a> :CtrlP :pwd<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬""
 " Pressing the tab key inserts 4 spaces
 set ts=8 sts=4 sw=4 expandtab
 " Add line to indicate 80 columns point
@@ -61,6 +59,8 @@ set cursorline
 " Visual autocomplete for command menu
 set wildmenu
 " Redraw only when we need to
+set autoindent
+" New line has the same indentation as current one
 set lazyredraw
 " Search as characters are entered, and highlight results
 set incsearch
