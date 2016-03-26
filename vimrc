@@ -22,7 +22,7 @@ nmap <leader>n :bnext<CR>
 nmap <leader>p :bprevious<CR>
 " Enable syntax highlighting and set colour scheme
 syntax enable
-colorscheme monokai
+:silent! colorscheme monokai
 " Show line numbers in the margin
 set number
 " Automatically type closing paren/bracket/quote
