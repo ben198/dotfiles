@@ -8,6 +8,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 filetype plugin indent on
@@ -23,8 +25,8 @@ nmap <leader>p :bprevious<CR>
 " Enable syntax highlighting and set colour scheme
 syntax enable
 :silent! colorscheme monokai
-" Show line numbers in the margin
-set number
+" Show relative line numbers
+set relativenumber
 " Automatically type closing paren/bracket/quote
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
