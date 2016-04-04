@@ -27,6 +27,8 @@ syntax enable
 :silent! colorscheme monokai
 " Show relative line numbers
 set relativenumber
+" Show absolute line number for current line
+set number
 " Automatically type closing paren/bracket/quote
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
