@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'sickill/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
@@ -26,7 +25,8 @@ nmap <leader>n :bnext<CR>
 nmap <leader>p :bprevious<CR>
 " Enable syntax highlighting and set colour scheme
 syntax on
-:silent! colorscheme monokai
+set background=dark
+:silent! colorscheme solarized
 " Show relative line numbers
 set relativenumber
 " Show absolute line number for current line
