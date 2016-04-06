@@ -6,16 +6,18 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'sickill/vim-monokai'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-vinegar'
 
 call vundle#end()
 filetype plugin indent on
 
-" Change the mapleader from \ to ,
-let mapleader=","
+" Change the mapleader from \ to space
+let mapleader=" "
 " Edit / reload vimrc (the one in ~/dotfiles, not the .vimrc symlink)
 nmap <silent> <leader>ev :e ~/dotfiles/vimrc
 nmap <silent> <leader>sv :so ~/dotfiles/vimrc
@@ -23,7 +25,7 @@ nmap <silent> <leader>sv :so ~/dotfiles/vimrc
 nmap <leader>n :bnext<CR>
 nmap <leader>p :bprevious<CR>
 " Enable syntax highlighting and set colour scheme
-syntax enable
+syntax on
 :silent! colorscheme monokai
 " Show relative line numbers
 set relativenumber
@@ -75,3 +77,10 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc>:w<CR>l
 vnoremap <c-s> <Esc>:w<CR>
+" Function to strip trailing whitespace
+fun! TrimWhitespace()
+    let l:save_cursor = getpos('.')
+    %s/\s\+$//e
+    call setpos('.', l:save_cursor)
+endfun
+noremap <Leader>w :call TrimWhitespace()<CR>
