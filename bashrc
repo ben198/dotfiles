@@ -8,3 +8,5 @@ stty -ixon
 if test -f ~/.nvm/nvm.sh; then . ~/.nvm/nvm.sh; fi
 #
 test -s ~/.alias && . ~/.alias || true
+# enable 256-color for terminal applications
+export TERM="xterm-256color"
