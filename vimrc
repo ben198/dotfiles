@@ -11,6 +11,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-vinegar'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
