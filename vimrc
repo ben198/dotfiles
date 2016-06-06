@@ -12,18 +12,24 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
 
 " Change the mapleader from \ to space
 let mapleader=" "
+" Apply JSX syntax highlighting to .js files
+let g:jsx_ext_required = 0
 " Edit / reload vimrc (the one in ~/dotfiles, not the .vimrc symlink)
 nmap <silent> <leader>ev :e ~/dotfiles/vimrc
 nmap <silent> <leader>sv :so ~/dotfiles/vimrc
 " Allow easy toggling between buffers
 nmap <leader>n :bnext<CR>
 nmap <leader>p :bprevious<CR>
+" Open/close Nerdtree
+nnoremap <Leader>f :NERDTreeToggle<Enter>
 " Enable syntax highlighting and set colour scheme
 syntax on
 set background=dark
@@ -76,7 +82,7 @@ set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 " Save file with ctrl-s
 nnoremap <c-s> :w<CR>
-inoremap <c-s> <Esc>:w<CR>l
+inoremap <c-s> <Esc>:w<CR>
 vnoremap <c-s> <Esc>:w<CR>
 " Function to strip trailing whitespace
 fun! TrimWhitespace()
