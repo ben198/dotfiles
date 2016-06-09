@@ -28,6 +28,8 @@ nmap <silent> <leader>sv :so ~/dotfiles/vimrc
 " Allow easy toggling between buffers
 nmap <leader>n :bnext<CR>
 nmap <leader>p :bprevious<CR>
+" Close buffer when using Nerdtree without messing up windows
+nnoremap <leader>q :bp<cr>:bd #<cr>
 " Open/close Nerdtree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 " Enable syntax highlighting and set colour scheme
