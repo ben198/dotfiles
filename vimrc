@@ -14,6 +14,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
