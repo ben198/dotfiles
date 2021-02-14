@@ -1,24 +1,8 @@
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'kien/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'mattn/emmet-vim'
-
-call vundle#end()
 filetype plugin indent on
-
+if (has("termguicolors"))
+    set termguicolors
+endif
 " Change the mapleader from \ to space
 let mapleader=" "
 " Apply JSX syntax highlighting to .js files
@@ -29,14 +13,9 @@ nmap <silent> <leader>sv :so ~/dotfiles/vimrc
 " Allow easy toggling between buffers
 nmap <leader>n :bnext<CR>
 nmap <leader>p :bprevious<CR>
-" Close buffer when using Nerdtree without messing up windows
-nnoremap <leader>q :bp<cr>:bd #<cr>
-" Open/close Nerdtree
-nnoremap <Leader>f :NERDTreeToggle<Enter>
-" Enable syntax highlighting and set colour scheme
+" Enable syntax highlighting
 syntax on
-set background=dark
-:silent! colorscheme solarized
+colorscheme onedark
 " Show relative line numbers
 set relativenumber
 " Show absolute line number for current line
@@ -49,8 +28,6 @@ inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 " Exit parens/brackets/quotes while in Insert mode
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
-" Ensure CtrlP plugin uses pwd as the root folder to search
-noremap <C-a> :CtrlP :pwd<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 " Pressing the tab key inserts 4 spaces
